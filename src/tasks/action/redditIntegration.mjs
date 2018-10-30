@@ -18,6 +18,7 @@ import { PostModel } from '../../models/post.mjs'
                     
                     return false
                 })[0].url
+                image = image.replace(/\&amp\;/g, '&')
             }
             
             return new Promise((resolve, reject) => {
